@@ -1,0 +1,383 @@
+@charset "utf-8";
+
+/*-----------
+/css/header.css (PC)
+-----------*/
+body {
+    font-size: 14px;
+    font-family: 'メイリオ',Meiryo,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック',sans-serif;
+    line-height: 1.5;
+    background: white;
+    color: #333333;
+    -webkit-highlight: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: text;
+    -webkit-text-size-adjust: 100%;
+    -webkit-overflow-scrolling: touch;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+img {
+    vertical-align: middle;
+}
+
+textarea {
+    resize: vertical;
+}
+
+a {
+    vertical-align: top;
+}
+
+a:link {
+    text-decoration: underline;
+    color: #1188cc;
+}
+
+a:visited {
+    text-decoration: underline;
+    color: #1188cc;
+}
+
+a:active {
+    text-decoration: none;
+    color: #1188cc;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #1188cc;
+}
+
+::-moz-selection {
+    background: #f2f6f8;
+    text-shadow: none;
+}
+
+::selection {
+    background: #f2f6f8;
+    text-shadow: none;
+}
+
+#common-header {
+    width: 100%;
+    background: url("//www.tokyodisneyresort.jp/images/common/bg_global_header_rpt.png") repeat-x left bottom white;
+    overflow: hidden;
+    -webkit-box-shadow: 3px 0 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 3px 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.3);
+    padding-top: 33px;
+}
+
+#common-header #common-header-inner {
+    position: relative;
+    width: 950px;
+    height: 54px;
+    margin: 0 auto;
+    padding-bottom: 6px;
+    background-color: transparent;
+}
+
+#common-header h1 {
+    position: relative;
+    width: 100px;
+    top: -12px;
+    left: 0;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#common-header .common-header-search {
+    position: absolute;
+    bottom: 13px;
+    right: 0;
+}
+
+#common-header .common-header-search a {
+    line-height: 20px;
+    display: block;
+    padding: 0 15px;
+}
+
+#common-header .common-header-search a:hover i.search {
+    background: url("//www.tokyodisneyresort.jp/images/common/icons/search_on.png") no-repeat left top;
+}
+
+#common-header .common-header-search i.search {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    background: url("//www.tokyodisneyresort.jp/images/common/icons/search.png") no-repeat left top;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: -1px;
+    margin-right: 0;
+}
+
+#common-header .common-header-nav {
+    position: absolute;
+    bottom: 13px;
+    left: 0;
+    height: 20px;
+    z-index: 1000;
+}
+
+#common-header .common-header-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+#common-header .common-header-nav ul > li {
+    list-style: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+#common-header .common-header-nav ul > li > a {
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    float: left;
+    text-align: center;
+    padding: 0 7px;
+    border-right: 1px solid #e6e6e6;
+}
+
+#common-header .common-header-nav ul > li > a > span {
+    display: block;
+    text-align: center;
+    line-height: 20px;
+    padding: 0 8px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    position: relative;
+    z-index: 0;
+    letter-spacing: 0;
+}
+
+#common-header .common-header-nav ul .n-tdl a {
+    border-left: 1px solid #e6e6e6;
+}
+
+#common-header .common-header-nav ul .n-tdl > a {
+    color: #dd4477;
+}
+
+#common-header .common-header-nav ul .n-tdl > a:hover span {
+    background: #fdf5f8;
+}
+
+#common-header .common-header-nav ul .n-tds > a {
+    color: #11aaaa;
+}
+
+#common-header .common-header-nav ul .n-tds > a:hover span {
+    background: #f3fbfb;
+}
+
+#common-header .common-header-nav ul .n-ticket > a {
+    color: #58b3e9;
+}
+
+#common-header .common-header-nav ul .n-ticket > a:hover span {
+    background: #eef7fc;
+}
+
+#common-header .common-header-nav ul .n-calendar > a {
+    color: #8866bb;
+}
+
+#common-header .common-header-nav ul .n-calendar > a:hover span {
+    background: #f9f6ff;
+}
+
+#common-header .common-header-nav ul .n-hotel > a {
+    color: #ee9911;
+}
+
+#common-header .common-header-nav ul .n-hotel > a:hover span {
+    background: #fffcef;
+}
+
+#common-header .common-header-nav ul .n-special > a {
+    color: #c81818;
+}
+
+#common-header .common-header-nav ul .n-special > a:hover span {
+    background: #fdf4f4;
+}
+
+#common-header .common-header-nav ul .n-info > a {
+    color: #0055aa;
+}
+
+#common-header .common-header-nav ul .n-info > a:hover span {
+    background: #f2f6fb;
+}
+
+#common-header .common-header-nav ul .n-tdr > a {
+    border-right: none;
+}
+
+
+/*-----------
+/css/footer.css (PC)
+-----------*/
+#common-footer {
+    width: 100%;
+    padding: 15px 0;
+    border-top: 1px solid #e6e6e6;
+}
+
+#common-footer #common-footer-inner {
+    width: 960px;
+    margin: 0 auto;
+    display: inline-block;
+  /* Hides from IE-mac \*/
+    *zoom: 1;
+    display: block;
+  /* End hide from IE-mac */
+}
+
+#common-footer #common-footer-inner:after {
+    content: " ";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+#common-footer #common-footer-inner ul {
+    font-size: 12px;
+    float: left;
+}
+
+#common-footer #common-footer-inner ul li {
+    list-style: none;
+    display: inline;
+    margin: 0 15px 0 0;
+    padding: 0 15px 0 0;
+    border-right: 1px solid #666;
+}
+
+#common-footer #common-footer-inner ul li.last-child {
+    border-right: none;
+}
+
+#common-footer #common-footer-inner .copyright {
+    font-size: 12px;
+    float: right;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,a:active,a:visited,a:link {
+    text-decoration: none;
+}
+
+.breadcrumb {
+    width: 950px;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-size: 12px;
+}
+
+.breadcrumb li {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    padding-right: 15px;
+    margin-right: 4px;
+    background: url('../../images/common/breadcrumb.png') no-repeat right center;
+}
+
+.breadcrumb li.current {
+    background: none;
+}
+
+.breadcrumb li a {
+    text-decoration: none !important;
+}
+
+.radios a, .checkboxes a, .text-buttons a {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    line-height: 1.1;
+    letter-spacing: normal;
+    background: #fff;
+    text-decoration: none;
+}
+
+.text-buttons a {
+    border: 1px solid #ccc;
+    margin: 0 5px 0 0;
+    background: #ececec;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjZmJmYmZiIi8+PHN0b3Agb2Zmc2V0PSI1MSUiIHN0b3AtY29sb3I9IiNmNGY0ZjQiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZmVmZWYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(50%, #fbfbfb), color-stop(51%, #f4f4f4), color-stop(100%, #efefef));
+    background: -webkit-linear-gradient(top, #ffffff 0%, #fbfbfb 50%, #f4f4f4 51%, #efefef 100%);
+    background: -moz-linear-gradient(top, #ffffff 0%, #fbfbfb 50%, #f4f4f4 51%, #efefef 100%);
+    background: -o-linear-gradient(top, #ffffff 0%, #fbfbfb 50%, #f4f4f4 51%, #efefef 100%);
+    background: linear-gradient(top, #ffffff 0%, #fbfbfb 50%, #f4f4f4 51%, #efefef 100%);
+    -pie-background: linear-gradient(top, #ffffff 0%, #fbfbfb 50%, #f4f4f4 51%, #efefef 100%);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border-radius: 30px;
+    padding: 0.4em 0.6em;
+    color: #1188cc;
+}
+
+.text-buttons a:hover {
+    color: #1188cc;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZiZmZmZiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjYzhlY2ZmIi8+PHN0b3Agb2Zmc2V0PSI1MSUiIHN0b3AtY29sb3I9IiNhOWRiZjkiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3YWMwZTgiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fbffff), color-stop(50%, #c8ecff), color-stop(51%, #a9dbf9), color-stop(100%, #7ac0e8));
+    background: -webkit-linear-gradient(top, #fbffff 0%, #c8ecff 50%, #a9dbf9 51%, #7ac0e8 100%);
+    background: -moz-linear-gradient(top, #fbffff 0%, #c8ecff 50%, #a9dbf9 51%, #7ac0e8 100%);
+    background: -o-linear-gradient(top, #fbffff 0%, #c8ecff 50%, #a9dbf9 51%, #7ac0e8 100%);
+    background: linear-gradient(top, #fbffff 0%, #c8ecff 50%, #a9dbf9 51%, #7ac0e8 100%);
+    -pie-background: linear-gradient(top, #fbffff 0%, #c8ecff 50%, #a9dbf9 51%, #7ac0e8 100%);
+}
+
+.text-buttons.text-buttons-s {
+    font-size: 12px;
+}
+
+.text-buttons.text-buttons-s a {
+    padding: 0.2em 0.7em 0;
+    margin: 0 3px 0 0;
+}
+
+/* #DisnyJp */
+#DisnyJp {
+    width: 100%;
+    height: 28px;
+    _height: 33px;
+    background: #eceff0;
+    margin-bottom: -5px;
+    zoom: 1;
+    position: absolute;
+    top: 0;
+}

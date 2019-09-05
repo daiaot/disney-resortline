@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+/*-----------
+header,footer (SPN)
+-----------*/
+body, header, footer, header *, footer * {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  /*-webkit-tap-highlight-color: rgba(255,255,255,0);*/
+}
+
+.notap {
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,a:active,a:visited,a:link {
+    text-decoration: none;
+}

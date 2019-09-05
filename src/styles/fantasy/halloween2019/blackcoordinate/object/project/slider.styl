@@ -1,0 +1,108 @@
+
+.slide-wrap
+  width 100%
+
+.slick-dots
+  // list-style-type none
+  // text-align center
+  // display flex
+  position absolute
+  // bottom -40px
+  // bottom per(-28)
+  bottom -34px
+  display block
+  width 100%
+  padding 0
+  margin 0
+  list-style none
+  text-align center
+
+  // +sp()
+  // bottom -18px
+  ul&
+    font-size 0
+
+  li
+    // display inline
+    position relative
+    display inline-block
+    width 14px
+    height 14px
+    margin 0 5px
+    padding 0
+    cursor pointer
+
+    // +sp()
+    // width 8px
+    // height 8px
+    &.slick-active
+      button:before
+        color #a51fa9
+
+    button
+      font-size 0
+      line-height 0
+      display block
+      width 14px
+      height 14px
+      padding 5px
+      cursor pointer
+      color transparent
+      border 0
+      outline none
+      background transparent
+
+      // +sp()
+      // width 8px
+      // height 8px
+      // padding 4px
+      &:before
+        font-size 14px
+        line-height 14px
+        position absolute
+        top 0
+        left 0
+        width 14px
+        height 14px
+        content '●'
+        text-align center
+        opacity 0.75
+        color #c2c3c3
+        -webkit-font-smoothing antialiased
+        -moz-osx-font-smoothing grayscale
+        // +sp()
+        // font-size 8px
+        // line-height 8px
+        // width 8px
+        // height 8px
+
+.slick-slide
+  opacity 0
+
+  &.slick-cloned
+    opacity 1
+
+  &.slick-current
+    opacity 1
+
+  img
+    width 100%
+
+// _:lang(x)::-ms-backdrop,
+// .slick-slide
+// opacity 0
+// &.slick-cloned
+// opacity 1
+// &.slick-current
+// opacity 1
+
+// .slide-item .slick-dots li
+//   cursor auto
+//   pointer-events none !important
+//   touch-action none !important
+
+.slide-item .slick-dots li button
+  // cursor default
+  cursor auto
+  pointer-events none !important
+  touch-action none
