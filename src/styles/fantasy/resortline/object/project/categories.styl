@@ -1,56 +1,3 @@
-@keyframes balloonanimoff
-  0%
-    opacity 0
-
-  90%
-    opacity 0
-
-  100%
-    opacity 0
-
-@keyframes balloonanim
-  0%
-    opacity 0
-    transform scale(0, 0)
-
-  90%
-    opacity 0
-    transform translateY(10px) scale(0.8, 0.8)
-
-  100%
-    opacity 1
-    transform translateY(0) scale(1, 1)
-
-@keyframes buruburu
-  0%
-    transform translate(0, 0) rotate(-3deg)
-
-  50%
-    transform translate(0, -1px) rotate(0deg)
-
-  100%
-    transform translate(0, 0) rotate(3deg)
-
-@keyframes key1
-  0%
-    transform translateY(10px)
-
-  0%
-    transform translateY(-10px)
-
-  100%
-    transform translateY(0)
-
-@keyframes zoomIn
-  0%
-    opacity 0
-    -webkit-transform scale3d(0.3, 0.3, 0.3)
-    -ms-transform scale3d(0.3, 0.3, 0.3)
-    transform scale3d(0.3, 0.3, 0.3)
-
-  50%
-    opacity 1
-
 clearfix()
   +cache('clearfix')
     &::after
@@ -58,27 +5,32 @@ clearfix()
       display block
       clear both
 
+
 #content-area
   position relative
   clear both
-  background url('../images/bg.png') 50% 0 repeat
+  // background url('../images/bg.png') 50% 0 repeat
+  background linear-gradient(#c1d5e4, #e6d4eb)
 
   a
     transition all 0.3s
 
     &:hover
       opacity 0.7
-
   *
     box-sizing border-box
+    font-family '游明朝体', 'Yu Mincho', YuMincho, 'ヒラギノ明朝 Pro', 'Hiragino Mincho Pro', 'MS P明朝', 'MS PMincho', serif
 
   .sec-inner
     position relative
     // z-index: 70
     overflow hidden
 
+
+
+
+
 .sec-block
-  // margin-bottom 30px
   h2
     text-indent 100%
     white-space nowrap
@@ -91,537 +43,217 @@ clearfix()
     overflow hidden
     line-height 0
 
-  &__lead
-    display block
 
-    h3&
-      margin-bottom per(36)
+clearfix()
+  +cache('clearfix')
+    &::after
+      content ''
+      display block
+      clear both
 
-  &__text
-    text-align center
-    color #fff
-    font-size (26 / 750) * 100vw
-    line-height 1.8
 
-    +pc()
-      font-size 26px
-
-  // &:nth-child(2)
-  &:nth-of-type(2)
-    margin-bottom per(100)
-
-    .sec-block__lead
-      background url('../images/img_lead01.png') 50% 0 no-repeat
-      background-size 104% auto
-      padding-top per(201)
-
-  &:nth-of-type(3)
-    .sec-block__title
-      background url('../images/img_title01.png') 50% 0 no-repeat
-      background-size per(708) auto
-      padding-top per(289)
-
-    .sec-block__text
-      margin-top per(-21)
-      padding-bottom per(60)
-
-  &:nth-of-type(4)
-    background url('../images/deco_punpkin.png') 50% 0 no-repeat
-    background-size per(711) auto
-    padding-top per(196, 711)
-    margin-top per(80)
-
-    .sec-block__title
-      background url('../images/img_title02.png') 50% 0 no-repeat
-      background-size per(708) auto
-      padding-top per(289)
-      margin-top per(110)
-
-    .gallery-wrap
-      &:nth-of-type(1)
-        .sec-block__lead
-          background url('../images/img_lead02.png') 50% 0 no-repeat
-          background-size per(587) auto
-          padding-top per(132, 750)
-
-      &:nth-of-type(2)
-        .sec-block__lead
-          background url('../images/img_lead03.png') 50% 0 no-repeat
-          background-size per(487) auto
-          padding-top per(125, 750)
-
-      &:nth-of-type(3)
-        .sec-block__lead
-          background url('../images/img_lead04.png') 50% 0 no-repeat
-          background-size per(481) auto
-          padding-top per(136, 750)
-
-      &:nth-of-type(4)
-        .sec-block__lead
-          background url('../images/img_lead05.png') 50% 0 no-repeat
-          background-size per(570) auto
-          padding-top per(126, 750)
-
-      &:nth-of-type(5)
-        .sec-block__lead
-          background url('../images/img_lead06.png') 50% 0 no-repeat
-          background-size per(480) auto
-          padding-top per(134, 750)
-
-  &:nth-of-type(5)
-    background url('../images/deco_punpkin.png') 50% bottom no-repeat
-    background-size per(711) auto
-    padding-bottom per(196, 711)
-    margin per(110) 0 0
-
-    .sec-block__title
-      background url('../images/img_title03.png') 50% 0 no-repeat
-      background-size per(763) auto
-      padding-top per(313)
-      margin-top per(110)
-      position relative
-      z-index 1
-
-    .sec-block__title-sns
-      background url('../images/img_title04.png') 50% 0 no-repeat
-      background-size per(538) auto
-      padding-top per(202, 750)
-
-    .sns-wrap
-      margin-bottom per(60)
-      position relative
-
-      &__inner
-        position absolute
-        top 70%
-        left 50%
-        transform translate(-50%, -50%)
-        width per(310)
-
-      &__list
-        display flex
-        flex-wrap nowrap
-        justify-content space-between
-
-        a
-          display block
-
-          &.tw
-            background url('../images/icon_tw.png') 50% 0 no-repeat
-            background-size 100% auto
-            width 86px
-            padding-top 86px
-
-            +sp()
-              width 43px
-              padding-top 43px
-
-          &.fb
-            background url('../images/icon_fb.png') 50% 0 no-repeat
-            background-size 100% auto
-            width 86px
-            padding-top 86px
-
-            +sp()
-              width 43px
-              padding-top 43px
-
-          &.line
-            background url('../images/icon_line.png') 50% 0 no-repeat
-            background-size 100% auto
-            width 86px
-            padding-top 86px
-
-            +sp()
-              width 43px
-              padding-top 43px
-
-    .sec-btn__specialgoods
-      z-index 10
-      position absolute
-      left 50%
-      // bottom 2.5%
-      bottom 4.6%
-      transform translate(-50%, -50%)
-
-    .slide-wrap
-      margin-top per(-100)
-      margin-bottom per(340)
-
-      &:after
-        content ''
-        display block
-        width 100%
-        position absolute
-        // bottom per(-135)
-        bottom -17%
-        background url('../images/deco_web.png') 55.4% 0 no-repeat
-        background-size per(831) auto
-        // padding-top per(184,831)
-        padding-top per(184)
-        z-index 0
-
-      .slick-dots
-        z-index 2
-
-.youtube-wrap
-  max-width 100% !important
-  min-width 100% !important
+.sec-kv
   width 100%
-  overflow hidden
+  padding-top per(1316,750)
+  height 0
   position relative
-  // height calc(100vh - 132px)
-  // height 1175px !important
-  height per(1175) !important
-
   +sp()
-    height calc(100vh - 100px)
+    max-width 100% !important
+    min-width 100% !important
+    width 100%
+    overflow hidden
+    position relative
+    height calc(100vh - 132px)
 
-.youtube-content
-  width 100% !important
-  display block
-  position relative
-  pointer-events none
-  touch-action none
 
-  // padding-top 56.25% !important
-  +pc()
-    // padding-top per(1175) !important
-    // padding-top per(1100) !important
-    // padding-top per(1100) !important
-    padding-top per(1200) !important
-    // height calc(100vh - 132px)
-
-  +sp()
-    // padding-top per(1175,315) !important
-    // height calc(100vh - 100px)
-    padding-top per(1200)
-
-  iframe
+  &__content
+    background url('../images/kv.jpg') 50% 0 no-repeat
+    background-size 100% auto
+    width 100%
+    height 100%
     position absolute
-    top 50%
-    left 50%
-    transform translate(-50%, -50%)
-    width 112% !important
-    height 112% !important
+    top 0
+    left 0
+    opacity 0
+    transition 4s all ease
+    &.is-show
+      opacity 1
+    &__inner
+      padding 120px 30px 0
 
-    +sp()
-      height 115% !important
-      width 115% !important
+  &__title
+    background url('../images/img_kv_title.png') 50% 0 no-repeat
+    background-size 100% auto
+    width per(509,690)
+    height 0
+    padding-top per(39,509)
+    margin 0 0 per(50,690) per(24,690)
+    opacity 0
+    transition 3s all ease
+    transform translateY(20px)
+    // font-size 4.2rem
+    // line-height 1
+    // margin-bottom 50px
+    // letter-spacing 8px
+    &.is-show
+      opacity 1
+      transform translateY(0)
+
+  &__lead
+    background url('../images/img_kv_lead.png') 50% 0 no-repeat
+    background-size 100% auto
+    width per(483,690)
+    height 0
+    padding-top per(813,690)
+    margin 0 0 per(40,690) per(24,690)
+    opacity 0
+    transition 3s all ease
+    transform translateY(20px)
+    &.is-show
+      opacity 1
+      transform translateY(0)
+    // font-size 2.2rem
+    // line-height 2
+    // margin-bottom 40px
+    // font-weight bold
+    // letter-spacing 6px
+
+  &__logo
+    background url('../images/logo.png') 50% 0 no-repeat
+    background-size 100% auto
+    width 248px
+    height 120px
+    position absolute
+    top 846px
+    right 30px
+    opacity 0
+    transition 3s all ease
+    transform translateY(20px)
+    &.is-show
+      opacity 1
+      transform translateY(0)
 
   &__scroll
     position absolute
     bottom 0
     left 0
     width 100%
-    // padding 0 0 55px
-    font-family brandon-grotesque, sans-serif
+    padding 0 0 55px
+    font-family sans-serif !important
     font-size 12px
     font-weight 300
     color #fff
     text-align center
-    letter-spacing 0.08em
+    letter-spacing .08em
+    transform translateY(20px)
+    opacity 0
+    transition 3s all ease
+    +sp()
+      padding 0 0 50px
 
-    span
+    &.is-show
+      opacity 1
+      transform translateY(0)
+
+    &:after
+      position absolute
+      right 0
+      bottom 0
+      left 0
+      display block
+      width 2px
+      height 40px
+      margin 0 auto
+      content ""
+      background-color #fff
+      +sp()
+        width 1px
+
+
+.sec-info
+  width per(690)
+  margin 78px auto 120px
+
+  &__brn
+    display flex
+    flex-wrap nowrap
+    justify-content space-between
+    margin-bottom per(80)
+    li
+      width per(330,690)
+      height 68px
+
+      &:nth-of-type(1)
+        a
+          background: url('../images/img_btn_about.png') 50% 0 no-repeat
+          background-size: 100% auto
+      &:nth-of-type(2)
+        a
+          background: url('../images/img_btn_news.png') 50% 0 no-repeat
+          background-size: 100% auto
+      a
+        display block
+        width 100%
+        height 100%
+        text-indent 100%
+        white-space nowrap
+        overflow hidden
+
+  &__sns
+    display flex
+    flex-wrap nowrap
+    justify-content space-between
+    width per(414)
+    margin 0 auto per(40)
+    +pc()
+      width per(164,690)
+    li
+      width 66px
+      height 66px
+      &:last-child
+        +pc()
+          display none
+    a
+      display block
       text-indent 100%
       white-space nowrap
       overflow hidden
-      display block
-      width 190px
-      height 0
-      margin auto
-      padding-top 172px
-      background url('../images/img_scroll.png') 50% 0 no-repeat
-      background-size 100% auto
+      &.tw
+        background: url('../images/ico_tw.png') 50% 0 no-repeat
+        background-size: 100% auto
+        width 100%
+        height 100%
+      &.fb
+        background: url('../images/ico_fb.png') 50% 0 no-repeat
+        background-size: 100% auto
+        width 100%
+        height 100%
+      &.line
+        background: url('../images/img_btn_news.png') 50% 0 no-repeat
+        background-size: 100% auto
+        width 100%
+        height 100%
+        +pc()
+          display none
+  &__desc
+    *
+      font-size 1.4rem
+    p:nth-of-type(1)
+      margin-bottom 20px
+    li
+      line-height 2
 
-      +sp()
-        width percentage((190 / 750))
-        padding-top per(172)
 
-// #player
-// width: 100% !important
-// display: block
-// position: relative
-// padding-top: 56.25% !important
+
+
 .sec-inner
   width 100%
   max-width 750px
   margin auto
+  background-color #fff
 
-.gallery-wrap
-  position relative
 
-  &__lists
-    display flex
-    flex-wrap wrap
-    justify-content center
-    font-size 0
-    padding per(24) 0
-    background #fff
-    margin-bottom per(80)
 
-    li
-      width per(235)
-      padding-top per(24)
-      margin-left per(10)
-
-      +sp()
-        img
-          width 100%
-
-      &:nth-child(-n+3)
-        padding-top 0
-
-      &:nth-child(3n+1)
-        margin-left 0
-
-  &:last-of-type
-    .gallery-wrap__lists
-      margin-bottom 0
-
-  .sec-btn__showmore
-    position absolute
-    // bottom 48px
-    bottom 0
-    left 50%
-    transform translate(-50%, -62%)
-    // transition all .3s
-    // &:hover
-    // opacity .8
-
-.insta-wrap
-  &__kv
-    background url('../images/img_insta_kv.png') 50% 0 no-repeat
-    background-size 100% auto
-    padding-top per(789)
-    margin-bottom per(20)
-
-  &__stories
-    background url('../images/deco_spider.png') 64% -4% no-repeat
-    background-size per(903) auto
-    padding-top per(218, 903)
-    margin-bottom per(20)
-
-    ul
-      display flex
-      flex-wrap wrap
-      justify-content space-between
-      padding 0 per(24)
-      margin-bottom per(35)
-
-    li
-      width per(225, 702)
-
-      img
-        width 100%
-
-.sec-btn
-  &__dl
-    display block
-    background url('../images/btn_download.png') 50% 0 no-repeat
-    background-size per(700) auto
-    padding-top per(82)
-
-  &__instagram
-    display block
-    background url('../images/btn_instagram.png') 50% 0 no-repeat
-    background-size per(700) auto
-    padding-top per(82)
-
-  &__specialgoods
-    display block
-    background url('../images/btn_specialgoods.png') 50% 0 no-repeat
-    background-size 100% auto
-    width per(526)
-    // background-size per(526) auto
-    height 0
-    margin auto
-    padding-top per(82)
-
-  &__showmore
-    display block
-    width per(354)
-    height 0
-    padding-top per(37)
-    background url('../images/btn_more.png') 50% 0 no-repeat
-    margin auto
-    background-size 100% auto
-
-.slide-wrap__image
-  position relative
-  // .slide-wrap__inner
-  // width 100%
-  // height 100%
-
-// .slide-wrap__inner
-.slide-wrap__image
-  .slide-wrap__balloon
-    display block
-    position absolute
-    top 100px
-    left 100px
-    opacity 0
-    transform translateY(10px) scale(0, 0)
-    transition 0s !important
-
-    &.on
-      opacity 1
-      transform translateY(0) scale(1, 1)
-      transition-delay 2s !important
-      transition 0.1s !important
-
-    // transition all 2.8s ease !important
-    // transition all 2.8s cubic-bezier(.54,.36,.43,.84) !important
-    // transition all 2.8s cubic-bezier(0.545, 0.080, 0.520, 0.975) !important
-    // transform translateY(-10px)
-    // opacity 0
-    &:focus
-      outline none
-
-    &__bg
-      position absolute
-      top 0
-      left 0
-      background #3e3a39
-      opacity 0.8
-      border-radius 8px
-      width 100%
-      padding-top 47px
-
-      +pc()
-        padding-top 90px
-
-      &:after
-        content ''
-        display block
-        position absolute
-        bottom -16px
-        left 50%
-        transform translate(-50%, 0)
-        width 0
-        height 0
-        border-left 14px solid transparent
-        border-right 14px solid transparent
-        border-top 16px solid #3e3a39
-
-        +sp()
-          bottom -8px
-          border-left 8px solid transparent
-          border-right 7px solid transparent
-          border-top 8px solid #3e3a39
-
-    &__content
-      position relative
-      display flex
-      flex-wrap nowrap
-      align-items center
-      justify-content space-between
-      top 50%
-      left 50%
-      transform translateX(-50%)
-      border-radius 8px
-      // padding 6px 32px
-      padding 6px 28px
-
-      +sp()
-        padding 4px 16px
-
-      &__thumb
-        background-size 100% auto
-        width 78px
-        padding-top 78px
-
-        +sp()
-          width 39px
-          padding-top 39px
-
-      &__name
-        font-size 23px
-        line-height 1.8
-        // padding 0 14px
-        padding-left 14px
-        color #fff
-        white-space nowrap
-
-        +sp()
-          font-size 12px
-          padding 0 7px
-
-.slick-slide.slick-current
-  .slide-wrap__image
-    .slide-wrap__balloon
-      // opacity 1
-      // animation-name balloonanim
-      // animation-duration 1s
-      // animation-timing-function ease-in
-      // animation-delay 3s
-      // animation-iteration-count 1
-
-.slide-wrap__inner
-  &._item01
-    .slide-wrap__balloon:nth-of-type(1)
-      top per(195, 1038)
-      left per(32)
-
-      .slide-wrap__balloon__content__thumb
-        background url('../images/thumbnail02.png') 50% 0 no-repeat
-        background-size 100% auto
-
-    .slide-wrap__balloon:nth-of-type(2)
-      top per(72, 1038)
-      left per(342)
-
-      .slide-wrap__balloon__content__thumb
-        background url('../images/thumbnail01.png') 50% 0 no-repeat
-        background-size 100% auto
-
-  &._item02
-    .slide-wrap__balloon:nth-of-type(1)
-      top per(195, 1038)
-      left per(140)
-
-      // left 50%
-      // transform translate(-50%)
-      .slide-wrap__balloon__content__thumb
-        background url('../images/thumbnail03.png') 50% 0 no-repeat
-        background-size 100% auto
-
-  &._item03
-    .slide-wrap__balloon:nth-of-type(1)
-      top per(774, 1038)
-      left per(204)
-
-      // left 50%
-      // transform translateX(-50%)
-      .slide-wrap__balloon__content__thumb
-        background url('../images/thumbnail04.png') 50% 0 no-repeat
-        background-size 100% auto
-
-      .slide-wrap__balloon__bg:after
-        top -16px
-        transform translate(-50%, 0) rotate(180deg)
-
-        +sp()
-          top -8px
-
-  &._item04
-    .slide-wrap__balloon:nth-of-type(1)
-      top per(60, 1038)
-      // left per(148)
-      left per(128)
-
-      .slide-wrap__balloon__content__thumb
-        background url('../images/thumbnail05.png') 50% 0 no-repeat
-        background-size 100% auto
-
-    .slide-wrap__balloon:nth-of-type(2)
-      top per(60, 1038)
-      // left per(400)
-      left per(420)
-
-      .slide-wrap__balloon__content__thumb
-        background url('../images/thumbnail06.png') 50% 0 no-repeat
-        background-size 100% auto
 
 #page-top
   position fixed
