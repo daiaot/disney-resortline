@@ -5,7 +5,6 @@ clearfix()
       display block
       clear both
 
-
 #content-area
   position relative
   clear both
@@ -17,6 +16,7 @@ clearfix()
 
     &:hover
       opacity 0.7
+
   *
     box-sizing border-box
     font-family '游明朝体', 'Yu Mincho', YuMincho, 'ヒラギノ明朝 Pro', 'Hiragino Mincho Pro', 'MS P明朝', 'MS PMincho', serif
@@ -25,10 +25,6 @@ clearfix()
     position relative
     // z-index: 70
     overflow hidden
-
-
-
-
 
 .sec-block
   h2
@@ -43,7 +39,6 @@ clearfix()
     overflow hidden
     line-height 0
 
-
 clearfix()
   +cache('clearfix')
     &::after
@@ -51,24 +46,44 @@ clearfix()
       display block
       clear both
 
-
 .sec-kv
   width 100%
-  padding-top per(1316,750)
-  height 0
   position relative
+
+  +pc()
+    height 0
+    padding-top per(1316, 750)
+
   +sp()
     max-width 100% !important
     min-width 100% !important
     width 100%
     overflow hidden
     position relative
-    height calc(100vh - 132px)
-
+    // height calc(100vh - 132px)
+    // height 100vh
+    // height calc(100vh - 132px)
+    // height calc(100vh - 178px)
+    // height calc(100vh - 260px)
+    // height calc(100vh - 88px)
+    // height calc(100vh - 132px)
+    padding 0
+    height calc(100vh - 104px)
+    // height 100vh
+    // padding-top per(1106,750)
+    // padding: 0
 
   &__content
     background url('../images/kv.jpg') 50% 0 no-repeat
     background-size 100% auto
+
+    +sp()
+      background url('../images/kv_sp.jpg') 50% 100% no-repeat
+      // background-size 120% auto
+      background-size cover
+      width 100%
+      height 100%
+
     width 100%
     height 100%
     position absolute
@@ -76,25 +91,39 @@ clearfix()
     left 0
     opacity 0
     transition 4s all ease
+
     &.is-show
       opacity 1
+
     &__inner
-      padding 120px 30px 0
+      positon relative
+      padding per(120) per(30) 0
+
+      +sp()
+        padding per(62) per(80) 0
 
   &__title
     background url('../images/img_kv_title.png') 50% 0 no-repeat
     background-size 100% auto
-    width per(509,690)
+    width per(509, 690)
     height 0
-    padding-top per(39,509)
-    margin 0 0 per(50,690) per(24,690)
+    padding-top per(39, 509)
+    margin 0 0 per(50, 690) per(24, 690)
     opacity 0
     transition 3s all ease
     transform translateY(20px)
+
     // font-size 4.2rem
     // line-height 1
     // margin-bottom 50px
     // letter-spacing 8px
+    +sp()
+      background url('../images/img_kv_title_sp.png') 50% 0 no-repeat
+      background-size 100% auto
+      width per(508, 590)
+      padding-top per(39, 508)
+      margin 0 0 per(50, 590)
+
     &.is-show
       opacity 1
       transform translateY(0)
@@ -102,21 +131,25 @@ clearfix()
   &__lead
     background url('../images/img_kv_lead.png') 50% 0 no-repeat
     background-size 100% auto
-    width per(483,690)
+    width per(483, 690)
     height 0
-    padding-top per(813,690)
-    margin 0 0 per(40,690) per(24,690)
+    padding-top per(813, 690)
+    margin 0 0 per(40, 690) per(24, 690)
     opacity 0
     transition 3s all ease
     transform translateY(20px)
+
+    +sp()
+      background url('../images/img_kv_lead_sp.png') 50% 0 no-repeat
+      background-size 100% auto
+      width per(483, 590)
+      height 0
+      padding-top per(813, 590)
+      margin 0
+
     &.is-show
       opacity 1
       transform translateY(0)
-    // font-size 2.2rem
-    // line-height 2
-    // margin-bottom 40px
-    // font-weight bold
-    // letter-spacing 6px
 
   &__logo
     background url('../images/logo.png') 50% 0 no-repeat
@@ -129,6 +162,21 @@ clearfix()
     opacity 0
     transition 3s all ease
     transform translateY(20px)
+
+    +sp()
+      background url('../images/logo.png') 50% 0 no-repeat
+      background-size 100% auto
+      width per(220, 750)
+      height 0
+      padding-top per(107, 750)
+      // top per(769,1106)
+      // top per(763,1106)
+      // top per(107,763)
+      // top per(667,1000)
+      // top per(769,1106)
+      top per(492, 788)
+      right per(40)
+
     &.is-show
       opacity 1
       transform translateY(0)
@@ -144,10 +192,11 @@ clearfix()
     font-weight 300
     color #fff
     text-align center
-    letter-spacing .08em
+    letter-spacing 0.08em
     transform translateY(20px)
     opacity 0
     transition 3s all ease
+
     +sp()
       padding 0 0 50px
 
@@ -164,33 +213,61 @@ clearfix()
       width 2px
       height 40px
       margin 0 auto
-      content ""
+      content ''
       background-color #fff
+
       +sp()
         width 1px
-
 
 .sec-info
   width per(690)
   margin 78px auto 120px
+
+  +sp()
+    width per(590)
+    margin per(90) auto per(120)
 
   &__brn
     display flex
     flex-wrap nowrap
     justify-content space-between
     margin-bottom per(80)
+
+    +sp()
+      flex-direction column
+      margin-bottom per(90, 590)
+
     li
-      width per(330,690)
-      height 68px
+      +pc()
+        width per(330, 690)
+        height 68px
+
+      +sp()
+        // width 100%
+        width per(606, 590)
+        height auto
+        line-height 0
 
       &:nth-of-type(1)
+        margin-bottom per(40, 590)
+
         a
-          background: url('../images/img_btn_about.png') 50% 0 no-repeat
-          background-size: 100% auto
+          background url('../images/img_btn_about.png') 50% 0 no-repeat
+          background-size 100% auto
+
+          +sp()
+            background url('../images/img_btn_about_sp.png') 50% 0 no-repeat
+            background-size 100% auto
+
       &:nth-of-type(2)
         a
-          background: url('../images/img_btn_news.png') 50% 0 no-repeat
-          background-size: 100% auto
+          background url('../images/img_btn_news.png') 50% 0 no-repeat
+          background-size 100% auto
+
+          +sp()
+            background url('../images/img_btn_news_sp.png') 50% 0 no-repeat
+            background-size 100% auto
+
       a
         display block
         width 100%
@@ -199,61 +276,83 @@ clearfix()
         white-space nowrap
         overflow hidden
 
+        +sp()
+          padding-top per(100, 606)
+
   &__sns
     display flex
     flex-wrap nowrap
     justify-content space-between
-    width per(414)
-    margin 0 auto per(40)
+    width per(414, 590)
+    margin 0 auto per(100, 590)
+
     +pc()
-      width per(164,690)
+      width per(164, 690)
+      margin 0 auto per(40)
+
     li
       width 66px
       height 66px
+
+      +sp()
+        width per(88, 414)
+        height 100%
+
       &:last-child
         +pc()
           display none
+
     a
       display block
       text-indent 100%
       white-space nowrap
       overflow hidden
+
+      +sp()
+        padding-top per(88, 88)
+
       &.tw
-        background: url('../images/ico_tw.png') 50% 0 no-repeat
-        background-size: 100% auto
+        background url('../images/ico_tw.png') 50% 0 no-repeat
+        background-size 100% auto
         width 100%
         height 100%
+
       &.fb
-        background: url('../images/ico_fb.png') 50% 0 no-repeat
-        background-size: 100% auto
+        background url('../images/ico_fb.png') 50% 0 no-repeat
+        background-size 100% auto
         width 100%
         height 100%
+
       &.line
-        background: url('../images/img_btn_news.png') 50% 0 no-repeat
-        background-size: 100% auto
+        background url('../images/ico_line.png') 50% 0 no-repeat
+        background-size 100% auto
         width 100%
         height 100%
+
         +pc()
           display none
+
   &__desc
     *
       font-size 1.4rem
+
+    +sp()
+      margin 0 per(-45, 590)
+
     p:nth-of-type(1)
       margin-bottom 20px
+
+      +sp()
+        margin-bottom per(20, 680)
+
     li
       line-height 2
-
-
-
 
 .sec-inner
   width 100%
   max-width 750px
   margin auto
   background-color #fff
-
-
-
 
 #page-top
   position fixed
