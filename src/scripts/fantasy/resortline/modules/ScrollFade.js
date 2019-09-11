@@ -1,4 +1,3 @@
-// import ScrollReveal from 'scrollreveal'
 import { TweenMax, Power3, TimelineMax } from 'gsap'
 
 export default class ScrollFade {
