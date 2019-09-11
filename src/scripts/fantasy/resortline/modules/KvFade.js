@@ -1,9 +1,8 @@
-
 import $ from 'jquery'
 
 export default class KvFade {
   constructor(selector) {
-    console.log('KvFade : constructor()')
+    // console.log('KvFade : constructor()')
     this.body = document.querySelectorAll('body')[0]
     this.kv = document.getElementsByClassName('sec-kv__content')
     this.ttl = document.getElementsByClassName('sec-kv__title')
@@ -14,7 +13,7 @@ export default class KvFade {
   }
 
   bindEvents() {
-    console.log('KvFade : bindEvents()')
+    // console.log('KvFade : bindEvents()')
     $(window).on('load', () => {
       // this.showKeyVisual()
       setTimeout(() => {
@@ -24,15 +23,15 @@ export default class KvFade {
   }
 
   showKeyVisual() {
-    console.log('KvFade : showKeyVisual()')
+    // console.log('KvFade : showKeyVisual()')
     this.kv[0].classList.add('is-show')
-    setTimeout(() => {
-      this.fadeTitle()
-    }, 1000)
+    // setTimeout(() => {
+    //   this.fadeTitle()
+    // }, 1000)
   }
 
   fadeTitle() {
-    console.log('KvFade : fadeTitle()')
+    // console.log('KvFade : fadeTitle()')
     this.ttl[0].classList.add('is-show')
     // DOMの削除
     setTimeout(() => {
@@ -41,7 +40,7 @@ export default class KvFade {
   }
 
   fadeLead() {
-    console.log('KvFade : fadeLead()')
+    // console.log('KvFade : fadeLead()')
     this.lead[0].classList.add('is-show')
     // DOMの削除
     setTimeout(() => {
@@ -50,21 +49,13 @@ export default class KvFade {
   }
 
   fadeLogo() {
-    console.log('KvFade : fadeLogo()')
+    // console.log('KvFade : fadeLogo()')
     this.logo[0].classList.add('is-show')
     this.fadeScroll()
   }
 
   fadeScroll() {
-    console.log('KvFade : fadeScroll()')
+    // console.log('KvFade : fadeScroll()')
     this.scroll[0].classList.add('is-show')
-  }
-
-
-
-  fadeparticle() {
-    this.particle01[0].classList.add('is-show')
-    this.particle02[0].classList.add('is-show')
-    this.particle03[0].classList.add('is-show')
   }
 }

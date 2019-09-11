@@ -52,7 +52,8 @@ clearfix()
 
   +pc()
     height 0
-    padding-top per(1316, 750)
+    // padding-top per(1316, 750)
+    padding-top per(1134, 750)
 
   +sp()
     max-width 100% !important
@@ -74,13 +75,16 @@ clearfix()
     // padding: 0
 
   &__content
+    // background url('../images/kv.jpg') 50% 0 no-repeat
     background url('../images/kv.jpg') 50% 0 no-repeat
     background-size 100% auto
 
     +sp()
-      background url('../images/kv_sp.jpg') 50% 100% no-repeat
+      // background url('../images/kv_sp.jpg') 50% 100% no-repeat
       // background-size 120% auto
+      background url('../images/kv.jpg') 50% 0 no-repeat
       background-size cover
+      // background-size 100% auto
       width 100%
       height 100%
 
@@ -220,7 +224,8 @@ clearfix()
         width 1px
 
 .sec-info
-  width per(690)
+  // width per(690)
+  width per(505, 550)
   margin 78px auto 120px
 
   +sp()
@@ -231,7 +236,8 @@ clearfix()
     display flex
     flex-wrap nowrap
     justify-content space-between
-    margin-bottom per(80)
+    // margin-bottom per(80)
+    margin-bottom per(58, 505)
 
     +sp()
       flex-direction column
@@ -239,8 +245,10 @@ clearfix()
 
     li
       +pc()
-        width per(330, 690)
-        height 68px
+        // width per(330, 690)
+        width per(242, 505)
+        // height 90px
+        height 66px
 
       +sp()
         // width 100%
@@ -249,7 +257,8 @@ clearfix()
         line-height 0
 
       &:nth-of-type(1)
-        margin-bottom per(40, 590)
+        +sp()
+          margin-bottom per(40, 590)
 
         a
           background url('../images/img_btn_about.png') 50% 0 no-repeat
@@ -277,7 +286,7 @@ clearfix()
         overflow hidden
 
         +sp()
-          padding-top per(100, 606)
+          padding-top per(196, 606)
 
   &__sns
     display flex
@@ -287,8 +296,10 @@ clearfix()
     margin 0 auto per(100, 590)
 
     +pc()
-      width per(164, 690)
-      margin 0 auto per(40)
+      // width per(164, 690)
+      width per(164, 505)
+      // margin 0 auto per(40)
+      margin 0 auto per(58, 505)
 
     li
       width 66px
@@ -350,7 +361,7 @@ clearfix()
 
 .sec-inner
   width 100%
-  max-width 750px
+  max-width 550px
   margin auto
   background-color #fff
 
